@@ -1,0 +1,54 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateTalkInput {
+  description: String!
+  title: String!
+  type: String!
+}
+
+input GetPhaseInput {
+  id: String!
+}
+
+type Mutation {
+  createPhase(phaseInput: PhaseInput!): Phase!
+  createTalk(createTalkInput: CreateTalkInput!): Talk!
+  removePhase(removePhaseInput: RemovePhaseInput!): Phase!
+  updatePhrase(updatePhraseInput: UpdatePhraseInput!): Phase!
+}
+
+type Phase {
+  description: String!
+  id: String!
+  title: String!
+}
+
+input PhaseInput {
+  description: String!
+  title: String!
+}
+
+type Query {
+  getPhase(getPhaseInput: GetPhaseInput!): Phase!
+  phases: [Phase!]!
+  talks: [Talk!]!
+}
+
+input RemovePhaseInput {
+  id: String!
+}
+
+type Talk {
+  description: String!
+  id: String!
+  title: String!
+  type: String!
+}
+
+input UpdatePhraseInput {
+  description: String!
+  id: String!
+  title: String!
+}
